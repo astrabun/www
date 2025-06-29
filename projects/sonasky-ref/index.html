@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>sonasky ref - astra bun</title>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!--
+    JSPM Generator Import Map
+    Edit URL: https://generator.jspm.io/#U2VhYGBkDM0rySzJSU1hcMjILynPLEpLUrKd7DQM9AzNAIAaehf2SUA
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@hotwired/turbo": "https://ga.jspm.io/npm:@hotwired/turbo@8.0.12/dist/turbo.es2017-esm.js"
+        }
+      }
+    </script>
+    <script type="module" src="/assets/js/turbo.js"></script><meta property="og:title" content="SonaSky REF: A Ref Sheet BUILT IN to Your Bluesky Account!" /><meta property="og:type" content="article" /><meta property="article:author" content="https://astrabun.com" /><meta property="article:publisher" content="https://astrabun.com" /><meta property="og:site_name" content="astra bun" /><meta property="og:image" content="https://astrabun.com/assets/img/sonasky/og_image__2025-01-11__SonaSkyREF.png"/></head>
+  <body>
+    <header>
+      <div class="desktop-nav"><div id="site-nav-windows-xp" class="window window-xp-default-theme" style="max-width: 300px">
+    <div class="title-bar">
+      <div class="title-bar-text">nav.exe</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <menu role="tablist">
+        <button aria-selected="true" aria-controls="navigation">Site Navigation</button>
+      </menu>
+      <article role="tabpanel" id="navigation">
+          <p>Choose what you want to see</p>
+            
+                <a href="/">
+                    <button>
+                        home
+                    </button>
+                </a>
+            
+                <a href="/now/">
+                    <button>
+                        now
+                    </button>
+                </a>
+            
+                <a href="/about/">
+                    <button>
+                        about
+                    </button>
+                </a>
+            
+                <a href="/projects/">
+                    <button>
+                        projects
+                    </button>
+                </a>
+            
+                <a href="/blog/">
+                    <button>
+                        blog
+                    </button>
+                </a>
+            
+        </article>
+  
+
+      <section class="field-row" style="justify-content: flex-end">
+        <button>BUN</button>
+      </section>
+    </div>
+  </div>
+</div>
+    </header>
+    <turbo-frame id="main-frame" data-turbo-action="advance">
+      <div class="outer-page-container">
+        <div class="mobile-nav">
+          <div class="page-container" style="--top-rounding: 0px;">
+            <header><nav class="nav">
+    
+        <li>
+            <a href="/">home</a>
+        </li>
+    
+        <li>
+            <a href="/now/">now</a>
+        </li>
+    
+        <li>
+            <a href="/about/">about</a>
+        </li>
+    
+        <li>
+            <a href="/projects/">projects</a>
+        </li>
+    
+        <li>
+            <a href="/blog/">blog</a>
+        </li>
+    
+</nav></header>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="page-container">
+              <main><p id="show-nav-help" style="font-size: x-small; text-align: center;">
+    <a href="#" id="reset-nav-position">can't see nav? click here to reset</a>
+</p><h3 id="project-sonasky-ref">project: sonasky ref</h3>
+
+<h4 id="sonasky-ref">SonaSky REF</h4>
+
+<blockquote>
+  <p>Furry ref-sheet hosting using your Bluesky account (AT Protocol)</p>
+</blockquote>
+
+<p><img src="/assets/img/sonasky/og_image__2025-01-11__SonaSkyREF.png" alt="" class="content-img rounded-img" /></p>
+
+<p><a href="/projects/sonasky-ref">permalink</a></p>
+
+<h4 id="about">about</h4>
+
+<p>My previous project was <a href="https://bsky.app/profile/sonasky.bsky.social" target="_blank">SonaSky</a>, a Bluesky Labeler providing fursona species account labels for furry users on the platform. Folks seem to like that, with over 20,000 furries applying various species labels to their profiles. You can read more about that <a href="/projects/sonasky">here, if you want</a></p>
+
+<p><img src="/assets/img/sonasky/sonasky-users-2025.png" alt="A screenshot of the SonaSky website, with text reading: &quot;Woah! 20,059 users are using SonaSky, with 39,688 labels assigned! That's an average of 1.98 labels per user.&quot;" class="content-img rounded-img" /></p>
+
+<p>With this large of an audience comes many, many requests for new label definitions (“The species xyz is not listed, can you create a label for it?”) But Bluesky has a cap on the payload size for labeller definitions, and SonaSky hit it… several times.</p>
+
+<p>After months of trying to figure out how to accomodate for a near-infinite number of species possibilities, I was hitting a wall. How could I remove myself from a position where I have to decide what labels get to exist and which don’t because of an arbitrary data size restriction?</p>
+
+<p>Well, after months and months of planning, brainstorming, and learning, I am very happy to present: <a href="https://ref.sonasky.app/" target="_blank">SonaSky Ref</a>!</p>
+
+<p><img src="/assets/img/sonasky/Screen%20Shot%202025-01-12%20at%2000.14.02.png" alt="A screenshot of the SonaSky Ref homepage, showing a text input box asking for a Bluesky handle." class="content-img rounded-img" /></p>
+
+<p>The goal for SonaSky Ref is to provide a way for furries to store information about their characters that isn’t limited by which labels are available on SonaSky. It allows for more specificity (text input for species name, text input for description), AND it provides a way for furries to host their ref sheet information.</p>
+
+<p>The best part? It’s all a part of your Bluesky account. Like, the data literally lives in the same place as your Bluesky profile. AT Protocol, baybeeeeeee~</p>
+
+<div style="display: flex; flex-direction: row; gap: 1rem; max-width: 100%; width: 100%;">
+    <img style="width: 100%; height: auto; object-fit: contain;" src="/assets/img/sonasky/Screen%20Shot%202025-01-12%20at%2000.17.52.png" />
+    <img style="width: 100%; height: auto; object-fit: contain;" src="/assets/img/sonasky/2025-01-12_00-28-50.jpg" />
+</div>
+
+<p>You can build a ref sheet that contains:</p>
+
+<ul>
+  <li>Name</li>
+  <li>Pronouns</li>
+  <li>Species</li>
+  <li>Description</li>
+  <li>Colors</li>
+  <li>Ref Sheet Image</li>
+  <li>Alternate Ref Sheet Image</li>
+  <li>A few miscellaneous tags (like “NSFW”, or “OK to draw without asking”)</li>
+</ul>
+
+<p><img src="/assets/img/sonasky/Screen%20Shot%202025-01-12%20at%2000.17.58.png" alt="" class="content-img rounded-img" /></p>
+
+<h4 id="how-to-use-it">how to use it</h4>
+
+<ol>
+  <li>visit the website and sign in with your Bluesky account</li>
+  <li>on the dashboard, click “Add Character”</li>
+  <li>fill out the form and click “save”
+    <ul>
+      <li>to include a ref sheet image, have a post on Bluesky where the first (or only) image in the post is your ref sheet. Then, paste the URL to the post in the box (it’ll auto-format the link as the at:// format for you)</li>
+      <li>to add colors, click the “add color” button, enter a hex code or select a color, and optionally add a label for what the color is used for.</li>
+    </ul>
+  </li>
+  <li>click “Characters” on the dashboard to manage (update/delete) existing characters saved to your account</li>
+</ol>
+
+<p><img src="/assets/img/sonasky/2025-01-12_00-44-36.jpg" alt="" class="content-img rounded-img" /></p>
+
+<h4 id="how-to-see-other-peoples-charactersref-sheets">how to see other people’s characters/ref sheets</h4>
+
+<p>When you’re on a user’s Bluesky profile page, and the url looks like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://bsky.app/profile/astra.bunnys.ky
+</code></pre></div></div>
+
+<p>Change the “b” in “bsky” to “s”, so the url looks like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://ssky.app/profile/astra.bunnys.ky
+</code></pre></div></div>
+
+<p>And you will be redirected to the appropriate page on <code class="language-plaintext highlighter-rouge">ref.sonasky.app</code>.</p>
+
+<p>Example: <a href="https://ref.sonasky.app/profile/did:plc:nkleu4mgtlxpsfwkdm6otsqu/3lfgbb2miec2d" target="_blank">My ref sheet!</a></p>
+
+<p>You can also type a Bluesky user handle into the homepage on <a href="https://ref.sonasky.app/" target="_blank">https://ref.sonasky.app/</a> to view if they have any characters in their repo.</p>
+
+<h4 id="wrapping-up">wrapping up</h4>
+
+<p>Not too much more to say! I may continue to add other little checkbox/label properties that you can add to the sheet. But for now, please enjoy!</p>
+
+<h5 id="further-reading">Further Reading</h5>
+
+<ul>
+  <li><a href="https://atproto.com/" target="_blank">https://atproto.com/</a></li>
+  <li><a href="https://atproto.com/specs/repository" target="_blank">https://atproto.com/specs/repository</a></li>
+  <li><a href="https://atproto.com/guides/applications" target="_blank">https://atproto.com/guides/applications</a></li>
+</ul>
+
+<h5 id="source-code">Source Code</h5>
+
+<p>Git repo: <a href="https://github.com/astrabun/sonasky-ref" target="_blank">https://github.com/astrabun/sonasky-ref</a></p>
+
+<h5 id="updates">Updates</h5>
+
+<ul>
+  <li>2025-02-25: Added GitHub link</li>
+</ul>
+
+<div id="c_widget"></div>
+<script src="/assets/js/comments.js">
+</script>
+
+
+              </main>
+            </div>
+          </div>
+        </div><footer>
+    <div class="page-container" style="--bottom-rounding: 0px;">
+        <div class="badges-container"><div class="badges">
+    
+        <div class="badge"><img src="/assets/img/badges/bestviewed.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/nftbutton.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/bi.png" title="I'm bi!"></div>
+    
+        <div class="badge"><a href="https://www.thetrevorproject.org/resources/article/understanding-asexuality/" target="_blank"><img src="/assets/img/badges/ace.png" title="I'm gray ace!"></a></div>
+    
+        <div class="badge"><img src="/assets/img/badges/nonbinary.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/doobieralsei.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/88x31.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/ab-yr.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/affection.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/Area51_Vault_9548_browser.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/cavevader_caving_logo_netscape.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/darciedragon_88x31_grn.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/epiphany917_links_kingdomhearts2.jpeg" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/es.geocities.com_emibel_porta_gerencia_ii_art10_archivos_css1.png" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/furnow.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/saveanow.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/Heartland_Trail_1756_yahoo.jpg" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/hhogfan_maria.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/minecraft.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/no.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/Petsburgh_Haven_4144_bunnybut2.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/ResearchTriangle_Thinktank_9418_resource_buttons_hacker.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/steam.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/theorb.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/www.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/vscbutton.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/thirdimpact.png" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/warning_javascript.jpg" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/windows_xp.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/y2k.jpg" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/naptime.png" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/linux2.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/ubuntu.gif" title=""></div>
+    
+        <div class="badge"><img src="/assets/img/badges/windows.gif" title=""></div>
+    
+</div></div><div style="text-align: center; border-radius: 15px; padding: 15px; background: #348d9f8a"><div id="critter-webring-nav">
+    <p>The Internet Critters Webring</p>
+    <div>
+        <span><a href="https://critterweb.net/rings/critters?name=Astra Bun&to=prev" target="_blank">previous</a></span>
+        <span><a href="https://critterweb.net/rings/critters" target="_blank">info</a></span>
+        <span><a href="https://critterweb.net/rings/critters?name=Astra Bun&to=next" target="_blank">next</a></span>
+    </div>
+</div></div><div><p id="show-nav-help" style="font-size: x-small; text-align: center;">
+    <a href="#" id="reset-nav-position">can't see nav? click here to reset</a>
+</p></div>
+    </div>
+</footer></div>
+      <div id="sparkle-container"></div>
+      <script src="/assets/js/sparkle.js"></script>
+      <script src="https://unpkg.com/dayjs@1.11.13/dayjs.min.js"></script>
+      <style>
+        .desktop-nav {
+          display: none;
+        }
+        .mobile-nav {
+          display: block;
+        }
+        @media (min-width: 700px) {
+          .desktop-nav {
+            display: block;
+          }
+          .mobile-nav {
+            display: none;
+          }
+        }
+      </style>
+    </turbo-frame>
+    <script src="/assets/js/draggable_nav.js"></script>
+    <script>
+      document.getElementById('reset-nav-position').addEventListener('click', function(e) {
+        e.preventDefault();
+        localStorage.removeItem('navWindowPosition');
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
