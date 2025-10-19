@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap");
+:root {
+  cursor: url(https://cdn.custom-cursor.com/db/cursor/32/cute_rabbit_and_carrot_cursor.png), default;
+}
+
+body {
+  margin-top: 0;
+  height: 100vh;
+  background-color: hsl(209, 81%, 33%);
+  color: #bee0ff;
+  font-family: "Comic Relief", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  padding: 2rem;
+}
+body img {
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+
+a {
+  color: hsl(329, 100%, 80%);
+}
+
+.window-xp-default-theme, .window {
+  background: #ece9d8;
+  color: #222;
+}
+
+.title-bar {
+  font-family: Trebuchet MS;
+  background: linear-gradient(180deg, #1c54b1, #1c54b1 8%, #1c54b1 40%, #1c54b1 88%, #1c54b1 93%, #1c54b1 95%, #003dd7 96%, #1c54b1);
+  padding: 3px 5px 3px 3px;
+  border-top: 1px solid #34609f;
+  border-left: 1px solid #34609f;
+  border-right: 1px solid #34609f;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 7px;
+  font-size: 13px;
+  text-shadow: 1px 1px #34609f;
+  height: 21px;
+}
+
+div.badges-container {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+div.badges-container > div.badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
+  line-height: 2rem;
+  justify-content: space-evenly;
+}
+
+div.badges-container > div.badges > div.badge > img, div.badges-container > div.badges > div.badge > a > img {
+  width: 80px;
+}
+
+div.badges-container > div.badges > ul > li {
+  list-style: none;
+}
+
+div.home-container {
+  grid-area: home-container;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: subgrid;
+  grid-template-areas: "hc-main hc-main hc-main hc-main hc-windows";
+}
+div.home-container div.home-container-main {
+  grid-area: hc-main;
+}
+div.home-container div.home-container-windows {
+  grid-area: hc-windows;
+}
+@media (width <= 700px) {
+  div.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.chat-container {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.chat-sender {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.chat-from-me > .chat-sender {
+  text-align: right;
+}
+
+.chat-message {
+  position: relative;
+  max-width: 75%;
+  padding: 7px 15px;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.chat {
+  --rad: 15px;
+  --rad-sm: 5px;
+}
+
+.chat:not(.chat-from-me) .chat-message {
+  border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+  background-color: #e0e0e0;
+  color: #333;
+  margin-right: auto;
+}
+
+.chat-from-me .chat-message {
+  border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+  background-color: #d1e7ff;
+  color: #333;
+  margin-left: auto;
+}
+
+/* Improve radius for grouped messages */
+.chat:not(.chat-from-me) .chat-message:first-child,
+.chat:not(.chat-from-me) .chat-message + .chat-from-me .chat-message {
+  border-top-left-radius: var(--rad);
+}
+
+.chat-from-me .chat-message:first-child,
+.chat-from-me .chat-message + .chat:not(.chat-from-me) .chat-message {
+  border-top-right-radius: var(--rad);
+}
+
+/*# sourceMappingURL=main.css.map */
