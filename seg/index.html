@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astra bun</title>
+    <meta property="og:title" content="astra bun">
+    <meta property="og:site_name" content="astra bun">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dseg@0.46.0/css/dseg.css">
+</head>
+
+<body class="bg-zinc-950 text-cyan-700">
+    
+<style>
+    .seg {
+        font-family: "DSEG14-Modern";
+        font-weight: normal;
+    }
+</style>
+
+<div class="flex h-screen">
+    <p class="seg m-auto lg:text-4xl md:text-2xl" id="time-here"></p>
+</div>
+
+<script>
+    function doClock() {
+        const clock = document.getElementById('time-here');
+        clock.textContent = new Date().toISOString();
+        const clockSecond = (clock.textContent.split("T")[1].split(".")[0].split(":")[2]);
+        if (clockSecond % 2 === 0) {
+            clock.textContent = clock.textContent.replaceAll(":", " ");
+        }
+    }
+    doClock();
+    setInterval(doClock, 1000);
+</script>
+</body>
+
+</html>
