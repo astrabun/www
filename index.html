@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Burrow - astra bun</title>
+  <meta property="og:title" content="The Burrow - astra bun">
+  <meta property="og:site_name" content="astra bun">
+  <meta property="og:image" content="https://astrabun.com/assets/img/bec26cb5-0922-45b6-b79f-123ad0b8994f_kaylafox_og.jpg">
+  <meta property="og:description" content="Astra's corner of the 'net.">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body><style>
+    /* Make landing page fit exactly in the viewport with no vertical scroll */
+    html, body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    .landing-container-center {
+        margin: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        max-width: 640px;
+        align-items: center;
+        @media (width <= 500px) {
+            width: 80%;
+        }
+    }
+    .landing-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--raised-background-color);
+        border-radius: 25px;
+        padding: 3rem;
+        max-width: 640px;
+        .astra-header {
+            max-width: 500px;
+        }
+        @media (width <= 600px) {
+            max-width: 90%;
+            /* .astra-header {
+                max-width: 300px;
+            } */
+            img.astra-header-img {
+                transform: scale(1.0) translate(-250px, -260px) !important;
+            }
+        }
+    }
+    .landing-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        text-align: center;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            li {
+                list-style-type: none;
+                background-color: var(--astra-color-hair-secondary);
+                color: var(--astra-color-hair-primary);
+                border-radius: 50px;
+                font-size: small;
+                padding: 10px;
+            }
+        }
+    }
+    #continue-btn {
+        background-color: var(--astra-color-hair-secondary);
+        color: var(--astra-color-hair-primary);
+        border-radius: 50px;
+        font-size: x-large;
+        padding: 10px;
+    }
+    .landing-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    div.astra-bg {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1000;
+        pointer-events: none;
+    }
+    :root {
+        /* --astra-glow-color: rgba(255,200,180,0.6); */
+        --astra-glow-color: rgb(109, 240, 201,0.6);
+        --astra-glow-radius: 16px;
+    }
+    div.astra-bg img {
+        height: 100%;
+        width: auto;
+        display: block;
+        animation: float-bob 1.8s ease-in-out infinite;
+        filter: drop-shadow(0 0 var(--astra-glow-radius) var(--astra-glow-color));
+    }
+    @media (max-width: 1200px) {
+        :root {
+            --astra-glow-radius: 6px;
+        }
+        div.astra-bg {
+            position: fixed;
+            left: 50%;
+            top: 8vh;
+            transform: translateX(-50%);
+            height: auto;
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        div.astra-bg img {
+            max-height: 150px;
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 var(--astra-glow-radius) var(--astra-glow-color));
+            transition: transform 0.3s ease, filter 0.2s ease;
+            will-change: transform, filter;
+        }
+        div.astra-bg img {
+            animation: float-bob 1.8s ease-in-out infinite;
+            transform: translateY(-6px);
+            filter: drop-shadow(0 0 10px var(--astra-glow-color));
+        }
+    }
+    @keyframes float-bob {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0); }
+    }
+</style>
+<main>
+    <div class="astra-bg">
+        <picture><source type="image/webp" srcset="/img/sr9DDLwdiB-2027.webp 2027w"><img loading="lazy" decoding="async" src="/img/sr9DDLwdiB-2027.jpeg" alt="Astra" width="2027" height="3910"></picture>
+    </div>
+    <div class="landing-container-center">
+        <div class="landing-content">
+            <div class="astra-header">
+                <a href="/home">
+                    <picture><source type="image/webp" srcset="/img/GtqJSjFgI0-773.webp 773w"><img loading="lazy" decoding="async" src="/img/GtqJSjFgI0-773.jpeg" class="astra-header-img" alt="Astra Bun" width="773" height="1280"></picture>
+                </a>
+            </div>
+            <div class="landing-links">
+                
+                
+                <a href="https://art.astrabun.com/characters/Astra" target="_blank">
+                    <li>
+                        Reference Sheet
+                    </li>
+                </a>
+                
+                <a href="https://bsky.app/profile/astrabun.com" target="_blank">
+                    <li>
+                        Bluesky
+                    </li>
+                </a>
+                
+                <a href="https://www.twitch.tv/astrabun" target="_blank">
+                    <li>
+                        Twitch
+                    </li>
+                </a>
+                
+                <a href="https://www.tiktok.com/@astra.bun/" target="_blank">
+                    <li>
+                        TikTok
+                    </li>
+                </a>
+                
+                <a href="/drawbox/" target="_self">
+                    <li>
+                        Drawbox
+                    </li>
+                </a>
+                
+            </div>
+            <div class="landing-nav">
+                <p>You are entering the bun's burrow. Continue?</p>
+                <a href="/home" id="continue-btn">Continue.</a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

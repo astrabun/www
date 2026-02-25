@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astra bun</title>
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <style>
+      div.page-container > * > picture, div.page-container > * > * > img {
+        border-radius: var(--image-rounding);
+        max-width: 100%;
+        height: auto;
+      }
+      
+    </style>
+  </head>
+  <body><header>
+
+<div>
+    <div class="astra-header">
+        <a href="/home">
+            <picture><source type="image/webp" srcset="/img/GtqJSjFgI0-773.webp 773w"><img loading="lazy" decoding="async" src="/img/GtqJSjFgI0-773.jpeg" class="astra-header-img" alt="Astra Bun" width="773" height="1280"></picture>
+        </a>
+    </div>
+</div>
+<nav class="nav">
+    
+    <a href="/home/">
+        <li>
+            home
+        </li>
+    </a>
+    
+    <a href="/now/">
+        <li>
+            now
+        </li>
+    </a>
+    
+    <a href="/about/">
+        <li>
+            about
+        </li>
+    </a>
+    
+    <a href="/projects/">
+        <li>
+            projects
+        </li>
+    </a>
+    
+    <a href="/blog/">
+        <li>
+            blog
+        </li>
+    </a>
+    
+</nav></header>
+    <turbo-frame id="main-frame" data-turbo-action="advance">
+      <div class="sidebar-container">
+        <main>
+          <div class="outer-page-container">
+            <div>
+              <div>
+                <div class="page-container">
+                  <h1>uBlock Filters</h1>
+<p>Here are some uBlock Filters I've written (unless otherwise noted)</p>
+<div>
+<h2>Bluesky - Block Live Events</h2>
+<picture><source type="image/webp" srcset="/misc/ublock-filters/qhKtt9O4Aq-306.webp 306w"><img loading="lazy" decoding="async" src="/misc/ublock-filters/qhKtt9O4Aq-306.jpeg" alt="NFL event button promoted on Bluesky" width="306" height="61"></picture>
+<pre><code class="code-wrap-style">##a:has(img[src*=&quot;live-events.workers.bsky.app/images&quot;])
+</code></pre>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://unpkg.com/dayjs@1.11.19/dayjs.min.js"></script>
+        </main>
+<div class="sidebar sidebar-left">
+    <p>Facts:</p>
+    <ul>
+        <li><a href="/now">/now</a> last updated 2026-02-22</li>
+        <li>I'm probably pretty sleepy</li>
+        <li>I'm bnuuy</li>
+        <br>
+        <li id="random-fact-placeholder"></li>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var facts = [{"fact":"Rabbits perform an athletic leap, known as a \"binky\", when they're happy - performing twists and kicks in mid air!","source":"https://www.natgeokids.com/uk/discover/animals/general-animals/10-hopping-fun-rabbit-facts/"},{"fact":"Like cats, happy rabbits purr when they're content and relaxed.","source":"https://www.natgeokids.com/uk/discover/animals/general-animals/10-hopping-fun-rabbit-facts/"},{"fact":"Rabbits are lagomorphs. Other lagomorphs include hares and pikas.","source":"https://rabbit.org/resources/fun/rabbit-facts/"},{"fact":"Rabbits are crepuscular. This means they are most active at dusk and dawn when other animals' vision is poor.","source":"https://rabbit.org/resources/fun/rabbit-facts/"},{"fact":"Rabbits are social animals, with distinctive and unique personalities. Having a companion improves their mental and physical health.","source":"https://www.bbcearth.com/factfiles/animals/mammals/rabbit"},{"fact":"Rabbits and their closest cousins, hares, share a similar shape but differ in size and behaviour. Hares are larger, with longer, slender legs, and unlike rabbits, they spend most of their time above ground. They do not build warrens like rabbits, but instead they nest at ground level.","source":"https://www.bbcearth.com/factfiles/animals/mammals/rabbit"}];
+            if (facts && facts.length) {
+                var idx = Math.floor(Math.random() * facts.length);
+                var f = facts[idx];
+                var li = document.getElementById('random-fact-placeholder');
+                if (li) {
+                    var a = document.createElement('a');
+                    a.href = f.source || '#';
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    a.textContent = 'source';
+                    li.textContent = (f.fact || '') + ' (';
+                    li.appendChild(a);
+                    li.appendChild(document.createTextNode(')'));
+                }
+            }
+        });
+        </script>
+    </ul><div style="text-align: center; border-radius: 15px; padding: 15px; background: #348d9f8a"><div id="critter-webring-nav">
+    <p>The Internet Critters Webring</p>
+    <div>
+        <span><a href="https://critterweb.net/rings/critters?name=Astra Bun&to=prev" target="_blank">previous</a></span>
+        <span><a href="https://critterweb.net/rings/critters" target="_blank">info</a></span>
+        <span><a href="https://critterweb.net/rings/critters?name=Astra Bun&to=next" target="_blank">next</a></span>
+    </div>
+</div></div><link rel="stylesheet" href="https://furryring.neocities.org/onionring.css">
+<div id="furryring" style="margin-top: 1rem; margin-bottom: 1rem;">
+    <script type="text/javascript" src="https://furryring.neocities.org/onionring-variables.js"></script>
+    <script type="text/javascript" src="https://furryring.neocities.org/onionring-widget.js"></script>
+</div></div><div class="sidebar sidebar-right">
+    <p style="text-align: center;">Bluesky Posts</p>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async=""></script>
+    <bsky-embed username="astrabun.com" mode="dark" limit="3" link-target="_blank" link-image="true" load-more="true">
+    </bsky-embed>
+</div><footer>
+    <div class="page-container" style="--bottom-rounding: 0px;"><div class="badges-container"><div class="badges">
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/3wKE9cvwma-88.webp 88w"><img loading="lazy" decoding="async" src="/img/3wKE9cvwma-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/Q_4cH9RycN-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/sMYh_ZeIcs-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Q72zNrKrP0-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Q72zNrKrP0-88.jpeg" title="I'm bi!" alt="I'm bi!" width="88" height="31"></picture></div>
+    
+        <div class="badge"><a href="https://www.thetrevorproject.org/resources/article/understanding-asexuality/" target="_blank"><picture><source type="image/webp" srcset="/img/lY6vbzG6xg-88.webp 88w"><img loading="lazy" decoding="async" src="/img/lY6vbzG6xg-88.jpeg" title="I'm gray ace!" alt="I'm gray ace!" width="88" height="31"></picture></a></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/sTLFDz0Jgd-88.webp 88w"><img loading="lazy" decoding="async" src="/img/sTLFDz0Jgd-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><a href="https://ralseismokingadart.neocities.org/" target="_blank"><img src="/img/CuXxPR9Zsw-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></a></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/vUfsDbPF30-88.webp 88w"><img loading="lazy" decoding="async" src="/img/vUfsDbPF30-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/unFb0aeUwn-88.webp 88w"><img loading="lazy" decoding="async" src="/img/unFb0aeUwn-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/OM5YM9jMrh-88.webp 88w"><img loading="lazy" decoding="async" src="/img/OM5YM9jMrh-88.jpeg" title="" alt="" width="88" height="32"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/pWmMUCSUuT-88.webp 88w"><img loading="lazy" decoding="async" src="/img/pWmMUCSUuT-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/dzSVeUHwZP-88.webp 88w"><img loading="lazy" decoding="async" src="/img/dzSVeUHwZP-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Z6AI640oFl-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Z6AI640oFl-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Qw255gQbqX-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Qw255gQbqX-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/waK8kta94A-88.webp 88w"><img loading="lazy" decoding="async" src="/img/waK8kta94A-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/wIGIRg0U5--100.webp 100w"><img loading="lazy" decoding="async" src="/img/wIGIRg0U5--100.jpeg" title="" alt="" width="100" height="35"></picture></div>
+    
+        <div class="badge"><img src="/img/NFCsauLdLJ-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/_jeUyhwfPc-88.webp 88w"><img loading="lazy" decoding="async" src="/img/_jeUyhwfPc-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/vmxvC5ptTO-88.webp 88w"><img loading="lazy" decoding="async" src="/img/vmxvC5ptTO-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/WlJ5AWWhtV-88.webp 88w"><img loading="lazy" decoding="async" src="/img/WlJ5AWWhtV-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/-zM3VkRn_2-88.webp 88w"><img loading="lazy" decoding="async" src="/img/-zM3VkRn_2-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/ksm6sGBCjW-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/7GDGL9YqjS-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/qy5cxbRTpl-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/4YJ_bBSaSk-88.webp 88w"><img loading="lazy" decoding="async" src="/img/4YJ_bBSaSk-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/q4TLZ1c9MU-88.webp 88w"><img loading="lazy" decoding="async" src="/img/q4TLZ1c9MU-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/z28n5Zd7CB-88.webp 88w"><img loading="lazy" decoding="async" src="/img/z28n5Zd7CB-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/ndvRwWEobd-88.webp 88w"><img loading="lazy" decoding="async" src="/img/ndvRwWEobd-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/udjHmyQ240-88.webp 88w"><img loading="lazy" decoding="async" src="/img/udjHmyQ240-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/zWXGs1kroL-88.webp 88w"><img loading="lazy" decoding="async" src="/img/zWXGs1kroL-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/0ZSAtTVE1Q-88.webp 88w"><img loading="lazy" decoding="async" src="/img/0ZSAtTVE1Q-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/cTy678GrGj-88.webp 88w"><img loading="lazy" decoding="async" src="/img/cTy678GrGj-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/KyNTivR6iV-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+        <div class="badge"><img src="/img/6-UXeptWUv-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+        <div class="badge"><img src="/img/lRWR0C3UvW-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+</div></div></div>
+    
+    
+    
+</footer></div>
+    </turbo-frame>
+  </body>
+</html>

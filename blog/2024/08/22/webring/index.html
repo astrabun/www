@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rabbit Makes Webring in the Year 2024?? - astra bun</title>
+  <meta property="og:title" content="Rabbit Makes Webring in the Year 2024??">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="https://astrabun.com">
+  <meta property="article:publisher" content="https://astrabun.com">
+  <meta property="og:site_name" content="astra bun"><meta property="og:image" content="https://astrabun.com/assets/img/2024-08-21_22-10-46.png"><link rel="stylesheet" href="/assets/css/main.css">
+  
+  <style>
+    div.page-container>*>picture,
+    div.page-container>*>*>*>img {
+      border-radius: var(--image-rounding);
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body><header>
+
+<div>
+    <div class="astra-header">
+        <a href="/home">
+            <picture><source type="image/webp" srcset="/img/GtqJSjFgI0-773.webp 773w"><img loading="lazy" decoding="async" src="/img/GtqJSjFgI0-773.jpeg" class="astra-header-img" alt="Astra Bun" width="773" height="1280"></picture>
+        </a>
+    </div>
+</div>
+<nav class="nav">
+    
+    <a href="/home/">
+        <li>
+            home
+        </li>
+    </a>
+    
+    <a href="/now/">
+        <li>
+            now
+        </li>
+    </a>
+    
+    <a href="/about/">
+        <li>
+            about
+        </li>
+    </a>
+    
+    <a href="/projects/">
+        <li>
+            projects
+        </li>
+    </a>
+    
+    <a href="/blog/">
+        <li>
+            blog
+        </li>
+    </a>
+    
+</nav></header>
+  <turbo-frame id="main-frame" data-turbo-action="advance">
+    <div class="outer-page-container">
+      <div>
+        <div>
+          <div class="page-container">
+            <main>
+              <h1>
+                Rabbit Makes Webring in the Year 2024??
+              </h1>
+              <p class="post-meta">2024-08-21T22:30:00-0400&nbsp;- by Astra</p>
+              <p><picture><source type="image/webp" srcset="/img/5sc7Kpc1vY-1361.webp 1361w"><img loading="lazy" decoding="async" src="/img/5sc7Kpc1vY-1361.jpeg" alt="Article header image - Old webring.org header image with a bunny peaking out from the bottom-right corner" width="1361" height="747"></picture></p>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=B4LFYs3VpxY" target="_blank">In my thirst for internet-of-yesteryear-vibes, I made a webring</a>.</p>
+</blockquote>
+<h3>What</h3>
+<p>A webring is a collection of websites that are linked together in a circular structure, where each site includes a link to the next site in the ring. This format was popular in earlier days of the internet as a way for groups of people with similar themed websites to connect and share. It's a way to discover new websites, without all that newfangled &quot;Ess-Ee-Ohh&quot; (SEO) Google garbage.</p>
+<p>Webrings still exist, but I don't really hear about them much anymore.</p>
+<h3>Why</h3>
+<p>When webrings were more popular, I wasn't old enough to appreciate them, and I certainly would not have known enough how to make a website (at least not one I would deem worthy of being in a webring). I think they allow for real connection online, which I especially value nowadays in this hyperconnected, hypercommodified version of the internet. It's a slower, more intentional way to connect, where the emphasis isn'''t on clicks, likes, or shares, but on genuine interest. This also satisfies an intense nostalgia I have for old internet.</p>
+<p>The charm, it seems to me, is in the journey; clicking from one site to the next, you never quite know what you'll find. It could be a fan page for your favorite TV show, a personal blog full of unfiltered thoughts, or a treasure trove of art. It's exploration, with no algorithms - just pure, uncurated discovery. For me, personal websites are a space that values creativity over conformity, where we can celebrate our shared interests and maybe even inspire each other along the way, and a webring to connect these silos feels like the perfect, era-approprirate way to do so.</p>
+<p>So, I'm making up for lost time. Time to... <em><strong>start my own webring</strong></em>.</p>
+<h3>When</h3>
+<p>2024. Yep.</p>
+<h3>Who</h3>
+<p>Me, silly.</p>
+<h3>How</h3>
+<p>I'm getting to that!</p>
+<p>I wanted to keep things simple. Or at least &quot;simple&quot; insofar as the following criteria is concerned:</p>
+<ul>
+<li>Minimal JavaScript</li>
+<li>Static Site Generation (mainly so I can host it on Github Pages or move it elsewhere in the future)</li>
+<li>Easy to Update
+<ul>
+<li>to add new sites to a webring</li>
+<li>to add new webrings to the system</li>
+</ul>
+</li>
+</ul>
+<p>Out of scope: OPML/RSS feeds. Maybe that's something I'll want to revisit later, but for now, I just want a directory of sites that I can click through in a web browser.</p>
+<p>I briefly explored a few existing solutions, including:</p>
+<ul>
+<li><a href="https://github.com/k3rs3d/ringfairy" target="_blank">ringfairy</a> - Rust-based webring generator</li>
+<li><a href="https://github.com/mldangelo/open-webring" target="_blank">open-webring</a> - JavaScript webring software</li>
+</ul>
+<p>But neither of these did quite what I wanted. I'm already using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> to build my own site, and I've been getting pretty familiar with it, so I wondered if I could use that somehow. With a bit of work, it turns out I could.</p>
+<p>The following are bits and pieces of the Jekyll site with some notes on why they're there and what they're doing. To explore on your own, you could always go check out the <a href="https://github.com/astrabun/critterweb.net" target="_blank">repo</a>.</p>
+<hr>
+<p><code>_data/sites.yml</code> - Simple data file defining any sites that belong to any webrings within this generated site. For example, my site:</p>
+<pre><code class="code-wrap-style">- name: Astra Bun
+  link: &quot;https://astrabun.com&quot;
+  description: |
+    A bun on the internet!
+  rings:
+    - critters
+</code></pre>
+<p>This file is meant to be super easy to update; if someone is joining the webring, just create a new object in the list with a name, link, and description, and set rings to a list of ring IDs (slugs). If a user is meant to be on multiple rings (there aren't multiple on this service, at least not at the time of writing), then additional IDs can be added to their rings list.</p>
+<hr>
+<p><code>rings/&lt;ring-slug&gt;.md</code> - File to store webring metadata in. For the &quot;critters&quot; web ring, it's <code>rings/critters.md</code>.</p>
+<pre><code class="code-wrap-style">---
+slug: 'critters'
+name: 'The Internet Critters Webring'
+description: 'Webring for Internet Critters'
+layout: ring
+---
+</code></pre>
+<p>Not much to say here - just some basic metadata.</p>
+<hr>
+<p><code>_layouts/rings.html</code> - Layout file for rendering the webring info page (and also the JSON of the ring members??)</p>
+<p>This was probably the trickiest part of the process. This layout handles both rendering an HTML info page on what the ring is, who the members are, and some sample code to use as a member. There's some Liquid magic that handles the conditional output:</p>
+<pre><code class="code-wrap-style">
+{% if page.url contains '.json' %}
+{% include generate_ring_json.json slug=page.slug %}
+{% else %}
+...
+
+</code></pre>
+<p><code>generate_ring_json.json</code> is itself a Liquid file designed to filter the list of sites to only those with the current webring slug present and render an object that contains that array. I couldn't find a very graceful way to do this, so there's some really nasty string interpolation stuff happening to cobble together the JSON.</p>
+<p>The rings layout page also contains reference to <code>_includes/display_webring.md</code> which generates the sample code for including the webring navigation on a site. There's a few Liquid if/else conditions in there so that I could also use the same component to render a sample of what the navigation looks like, and also what it looks like when a website not in the webring uses it. There's a bit of code duplication in this file, but I decided I just don't care enough to worry about it. The duplication is really just to provide sample outputs simulating if the current site WAS or WAS NOT in the webring. It doesn't really matter if it is &quot;correct&quot; because this site will not be in the webring. Also, my goal was to spin this up as fast as possible, so, get off my back or whatever.</p>
+<hr>
+<p><code>api/rings.json</code> - A Liquid file to provide a JSON-formatted representation of all avaiable webrings (metadata only).</p>
+<pre><code class="code-wrap-style">---
+layout: none
+---
+{% assign data = site.rings | jsonify %}
+{% assign keys_to_remove = &quot;content,output,path,relative_path,date,collection,excerpt,categories,next,tags,previous,draft,layout,ext,id&quot; | split: &quot;,&quot; %}
+{% assign filtered_data = data | ring_remove_keys: keys_to_remove %}
+{% assign object_data = filtered_data | ring_array_to_object %}
+{{ object_data }}
+</code></pre>
+<hr>
+<p><code>api/rings/&lt;slug&gt;.json</code> (or in this case, <code>api/rings/critters.json</code>) - Finishes handling the JSON formatting for a given ring.</p>
+<pre><code class="code-wrap-style">---
+layout: ring
+permalink: /api/rings/critters.json
+slug: critters
+---
+
+{% assign page.url = &quot;/api/rings/critters.json&quot; %}
+</code></pre>
+<p>This works with a Ruby plugin and the condition in the ring layout to render the ring data in JSON.</p>
+<hr>
+<p><code>_config.yml</code> - a few notable config options to tie the last of this together</p>
+<pre><code class="code-wrap-style"># ...
+collections:
+  rings:
+    output: true
+    permalink: /:collection/:slug
+defaults:
+  - scope:
+      path: &quot;&quot;
+      type: rings
+    values:
+      layout: ring
+# ...
+</code></pre>
+<p>Mainly, the collection for rings is defined here, and we're able to set a default layout for the rings. Not much else to mention.</p>
+<hr>
+<p>There's a few small, custom Ruby plugins (some you've probably seen mentioned in code blocks above) written to do some data massaging, and one to help with conditionally using the JSON format of the ring page. These aren't too interesting, so I'm not going to spend time on them.</p>
+<h3>Where</h3>
+<p>I'm putting the ring <a href="https://critterweb.net/rings/critters" target="_blank">here, on critterweb.net</a>. I think I've built this in such a way that additional webrings can be hosted on this domain in the future, but for now, it's just the one! Interested in joining? The critter ring is aimed to be for furries, especially furries with websites that have similar aeshetics/small-web designs, so let me know if you'd like to join, either in the comments, or on <a href="https://bsky.app/profile/astrabun.com" target="_blank">Bluesky</a>.</p>
+<h3>Conclusion</h3>
+<p>This project, albeit challenging at times trying to wrestle with Liquid, was a blast from start to finish, not just because it let me flex my Jekyll muscles but because it felt like a tribute to the simpler, more personal days of the internet. Back before everything was dominated by AI and endless scrolling, the internet seemed to have more magical spaces - small, interconnected, and full of personality.</p>
+<p>It also gives me another chance to connect with the furry community online, which is so important to me. Furry is a hobby for me, but it's also a community that I've always found warmth and creativity in. This webring is a small way for me to contribute back to that, to hopefully connect with other furs and help us stay connected in our own unique corner of the web.</p>
+<p>Thank you for reading as I went on this little journey down internet memory lane.</p>
+<p><em>Also, check the footer of my website! There it is, the little navigation thingy!</em></p>
+<h3>UPDATES</h3>
+<h4><a name="update-remove-js-from-member-site"></a>2024-08-23</h4>
+<p>After getting some sleep, I realized there's no need to force all members to do their own JS implementation (especially if they prefer not to have much JS on their site), so instead I've updated the site to handle linking to next/previous sites.</p>
+<pre><code class="code-wrap-style">
+&lt;div id=&quot;critter-webring-nav&quot;&gt;
+    &lt;p&gt;The Internet Critters Webring&lt;/p&gt;
+    &lt;div&gt;
+        &lt;span&gt;&lt;a href=&quot;https://critterweb.net/rings/critters?name=SimulatedSiteName&amp;to=prev&quot; target=&quot;_blank&quot;&gt;previous&lt;/a&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;https://critterweb.net/rings/critters&quot; target=&quot;_blank&quot;&gt;info&lt;/a&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;a href=&quot;https://critterweb.net/rings/critters?name=SimulatedSiteName&amp;to=next&quot; target=&quot;_blank&quot;&gt;next&lt;/a&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+<p>This makes it a lot easier for folks to join than having to fiddle with JavaScript, but still leaves room for custom styling per site if desired! A simple previous/next link where you pass in your site name and the direction you want seems much simpler.</p>
+<p><a href="#update-remove-js-from-member-site">[Permalink to this update]</a></p>
+<h3>Read More</h3>
+<p>I found these resources helpful along this journey:</p>
+<ul>
+<li>&quot;<a href="https://gist.github.com/MichaelCurrin/f8d908596276bdbb2044f04c352cb7c7" target="_blank">Jekyll - how to build a REST API</a>&quot; - Gist on Github with some helpful notes on JSON/REST API in Jekyll</li>
+<li><a href="https://en.wikipedia.org/wiki/Webring" target="_blank">https://en.wikipedia.org/wiki/Webring</a></li>
+<li><a href="https://indieweb.org/webring" target="_blank">https://indieweb.org/webring</a></li>
+<li><a href="https://hover.blog/what-ever-happened-to-webrings/" target="_blank">What Ever Happened To Webrings?</a> (blog post on Hover, a DNS registrar; I've not used their services, but I liked this little blog post)</li>
+<li>[<em>NEW</em>] &quot;<a href="https://cascading.space/post/what-if-webrings-but-static-hosting/" target="_blank">What if Webrings, but Static Hosting?</a>&quot; by Cascade (member of the critters webring! published 2024-08-24T05:26:19.571Z)</li>
+</ul>
+<hr><div id="c_widget"></div>
+<script src="/assets/js/comments.js">
+</script></main>
+          </div>
+        </div>
+      </div><footer>
+    <div class="page-container" style="--bottom-rounding: 0px;"><div class="badges-container"><div class="badges">
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/3wKE9cvwma-88.webp 88w"><img loading="lazy" decoding="async" src="/img/3wKE9cvwma-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/Q_4cH9RycN-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/sMYh_ZeIcs-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Q72zNrKrP0-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Q72zNrKrP0-88.jpeg" title="I'm bi!" alt="I'm bi!" width="88" height="31"></picture></div>
+    
+        <div class="badge"><a href="https://www.thetrevorproject.org/resources/article/understanding-asexuality/" target="_blank"><picture><source type="image/webp" srcset="/img/lY6vbzG6xg-88.webp 88w"><img loading="lazy" decoding="async" src="/img/lY6vbzG6xg-88.jpeg" title="I'm gray ace!" alt="I'm gray ace!" width="88" height="31"></picture></a></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/sTLFDz0Jgd-88.webp 88w"><img loading="lazy" decoding="async" src="/img/sTLFDz0Jgd-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><a href="https://ralseismokingadart.neocities.org/" target="_blank"><img src="/img/CuXxPR9Zsw-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></a></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/vUfsDbPF30-88.webp 88w"><img loading="lazy" decoding="async" src="/img/vUfsDbPF30-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/unFb0aeUwn-88.webp 88w"><img loading="lazy" decoding="async" src="/img/unFb0aeUwn-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/OM5YM9jMrh-88.webp 88w"><img loading="lazy" decoding="async" src="/img/OM5YM9jMrh-88.jpeg" title="" alt="" width="88" height="32"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/pWmMUCSUuT-88.webp 88w"><img loading="lazy" decoding="async" src="/img/pWmMUCSUuT-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/dzSVeUHwZP-88.webp 88w"><img loading="lazy" decoding="async" src="/img/dzSVeUHwZP-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Z6AI640oFl-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Z6AI640oFl-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/Qw255gQbqX-88.webp 88w"><img loading="lazy" decoding="async" src="/img/Qw255gQbqX-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/waK8kta94A-88.webp 88w"><img loading="lazy" decoding="async" src="/img/waK8kta94A-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/wIGIRg0U5--100.webp 100w"><img loading="lazy" decoding="async" src="/img/wIGIRg0U5--100.jpeg" title="" alt="" width="100" height="35"></picture></div>
+    
+        <div class="badge"><img src="/img/NFCsauLdLJ-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/_jeUyhwfPc-88.webp 88w"><img loading="lazy" decoding="async" src="/img/_jeUyhwfPc-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/vmxvC5ptTO-88.webp 88w"><img loading="lazy" decoding="async" src="/img/vmxvC5ptTO-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/WlJ5AWWhtV-88.webp 88w"><img loading="lazy" decoding="async" src="/img/WlJ5AWWhtV-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/-zM3VkRn_2-88.webp 88w"><img loading="lazy" decoding="async" src="/img/-zM3VkRn_2-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/ksm6sGBCjW-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/7GDGL9YqjS-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><img src="/img/qy5cxbRTpl-88.webp" title="" alt="" loading="lazy" decoding="async" width="88" height="31"></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/4YJ_bBSaSk-88.webp 88w"><img loading="lazy" decoding="async" src="/img/4YJ_bBSaSk-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/q4TLZ1c9MU-88.webp 88w"><img loading="lazy" decoding="async" src="/img/q4TLZ1c9MU-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/z28n5Zd7CB-88.webp 88w"><img loading="lazy" decoding="async" src="/img/z28n5Zd7CB-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/ndvRwWEobd-88.webp 88w"><img loading="lazy" decoding="async" src="/img/ndvRwWEobd-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/udjHmyQ240-88.webp 88w"><img loading="lazy" decoding="async" src="/img/udjHmyQ240-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/zWXGs1kroL-88.webp 88w"><img loading="lazy" decoding="async" src="/img/zWXGs1kroL-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/0ZSAtTVE1Q-88.webp 88w"><img loading="lazy" decoding="async" src="/img/0ZSAtTVE1Q-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><picture><source type="image/webp" srcset="/img/cTy678GrGj-88.webp 88w"><img loading="lazy" decoding="async" src="/img/cTy678GrGj-88.jpeg" title="" alt="" width="88" height="31"></picture></div>
+    
+        <div class="badge"><img src="/img/KyNTivR6iV-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+        <div class="badge"><img src="/img/6-UXeptWUv-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+        <div class="badge"><img src="/img/lRWR0C3UvW-80.webp" title="" alt="" loading="lazy" decoding="async" width="80" height="15"></div>
+    
+</div></div></div>
+    
+    
+    
+</footer></div>
+    <script src="https://unpkg.com/dayjs@1.11.19/dayjs.min.js"></script>
+  </turbo-frame>
+</body>
+
+</html>
