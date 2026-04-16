@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pyrox0/fursona-schema/refs/heads/main/schema.json",
+  "sonas": [
+    {
+      "name": "Astra",
+      "pronouns": "he/they",
+      "gender": "Nonbinary",
+      "species": "Dutch Rabbit",
+      "description": "A rabbit who dyes their fur blue, takes photos, plays games, and is generally a nerd but in a cool way.",
+      "ref": "https://art.astrabun.com/characters/Astra",
+      "refAlt": "Astra the Dutch Rabbit",
+      "avatar": "https://astrabun.com/img/6mTY6it3v_-1750.webp",
+      "avatarAlt": "A closeup image of Astra.",
+      "age": 28,
+      "birthdate": "1997-05-04T00:00:00+00:00",
+      "colors": [
+        "#34609f",
+        "#bbe1ff",
+        "#f9b0d8",
+        "#1c54b1",
+        "#132e47",
+        "#6df0c9"
+      ]
+    }
+  ]
+}
