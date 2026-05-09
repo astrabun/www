@@ -1,0 +1,66 @@
+.chat-container {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.chat-sender {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.chat-from-me > .chat-sender {
+  text-align: right;
+}
+
+.chat-message {
+  position: relative;
+  max-width: 75%;
+  padding: 7px 15px;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.chat {
+  --rad: 15px;
+  --rad-sm: 5px;
+}
+
+.chat:not(.chat-from-me) .chat-message {
+  border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+  background-color: #e0e0e0;
+  color: #333;
+  margin-right: auto;
+}
+
+.chat-from-me .chat-message {
+  border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+  background-color: #d1e7ff;
+  color: #333;
+  margin-left: auto;
+}
+
+/* Improve radius for grouped messages */
+.chat:not(.chat-from-me) .chat-message:first-child,
+.chat:not(.chat-from-me) .chat-message + .chat-from-me .chat-message {
+  border-top-left-radius: var(--rad);
+}
+
+.chat-from-me .chat-message:first-child,
+.chat-from-me .chat-message + .chat:not(.chat-from-me) .chat-message {
+  border-top-right-radius: var(--rad);
+}
